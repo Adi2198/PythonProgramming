@@ -6,7 +6,7 @@
 
 `Code()`
 ```
-def check_data_type(ca):
+def check_data_type(ca): # To check data type and return value
     if type(ca) == int:
         return ca
     elif type(ca) == float:
@@ -15,11 +15,11 @@ def check_data_type(ca):
         return ca
     elif type(ca) == str:
         return ca
-    else:
+    else:               # if not float,int,complex,str the return False
         return False
         
 
-def mydict(dic):
+def mydict(dic): # TO check the type of iterable
     if type(dic) == dict:
         for key,value in dic.items():
             if not check_data_type(value):
@@ -28,7 +28,7 @@ def mydict(dic):
                 print(check_data_type(value))
     elif type(dic) == list:
         for value in dic:
-            mydict(value)
+            mydict(value) # recursive checking of type 
             #print(value)
     elif type(dic) == set:
         for value in dic:
